@@ -24,6 +24,7 @@ let package = Package(
 			dependencies: [
 				.product(name: "Leaf", package: "leaf"),
 				.product(name: "Vapor", package: "vapor"),
+				.target(name: "Model"),
 			],
 			swiftSettings: [
 				// Enable better optimizations when building in Release configuration. Despite the use of
