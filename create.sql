@@ -1,5 +1,5 @@
 CREATE TABLE users (
-	login TEXT,
+	login TEXT NOT NULL,
 	password_hash TEXT NOT NULL,
 	parent TEXT NOT NULL,
 
@@ -8,15 +8,17 @@ CREATE TABLE users (
 );
 
 CREATE TABLE media (
-	uuid TEXT PRIMARY KEY,
+	uuid TEXT NOT NULL,
 	title TEXT NOT NULL,
 	release_date INTEGER NOT NULL,
 	upload_date INTEGER NOT NULL,
-	synopsis TEXT
+	synopsis TEXT,
+
+	PRIMARY KEY (uuid)
 );
 
 CREATE TABLE tags (
-	value TEXT,
+	value TEXT NOT NULL,
 
 	PRIMARY KEY (value)
 );
@@ -42,12 +44,12 @@ CREATE TABLE playlists (
 CREATE TABLE playlist_positions (
 	playlist_title TEXT NOT NULL,
 	playlist_owner_login TEXT NOT NULL,
-	media_uuid TEXT NOT NULL,
+	medium_uuid TEXT NOT NULL,
 	position INTEGER NOT NULL,
 
 	PRIMARY KEY (playlist_title, playlist_owner_login),
 	FOREIGN KEY (playlist_owner_login, playlist_title) REFERENCES playlists(owner_login, title),
-	FOREIGN KEY (media_uuid) REFERENCES media(uuid)
+	FOREIGN KEY (medium_uuid) REFERENCES media(uuid)
 ); 
 
 CREATE TABLE playlist_tags (
