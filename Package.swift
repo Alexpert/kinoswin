@@ -14,11 +14,16 @@ let package = Package(
 	],
 	targets: [
 		.target(
+			name: "Model",
+			dependencies: [
+				.product(name: "SQLCodable", package: "SQLCodable")
+			]
+		),
+		.target(
 			name: "App",
 			dependencies: [
 				.product(name: "Leaf", package: "leaf"),
 				.product(name: "Vapor", package: "vapor"),
-				.product(name: "SQLCodable", package: "SQLCodable")
 			],
 			swiftSettings: [
 				// Enable better optimizations when building in Release configuration. Despite the use of
