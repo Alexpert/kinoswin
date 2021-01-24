@@ -5,13 +5,9 @@ func routes(_ app: Application) throws {
 	try app.register(collection: AuthController())
 
 	let protected = app.routes.grouped(
-		User.sessionAuthenticator(),
+		UserSessionAuthenticator(),
 		User.guardMiddleware()
 	)
 
 	try protected.register(collection: MainController())
-}
-
-extension User: SessionAuthenticatable {
-	
 }
