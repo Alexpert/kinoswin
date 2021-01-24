@@ -1,13 +1,15 @@
 import Leaf
 import Vapor
 
-// configures your application
 public func configure(_ app: Application) throws {
-	// uncomment to serve files from /Public folder
-	// app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
+	app.passwords.use(.bcrypt)
+
+	app.middleware.use(RedirectErrorMiddleware())
+	app.middleware.use(app.sessions.middleware)
+
+	app.sessions.use(.memory)
 
 	app.views.use(.leaf)
 
-	// register routes
 	try routes(app)
 }

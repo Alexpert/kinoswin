@@ -1,11 +1,13 @@
 import Vapor
+import Model
 
 func routes(_ app: Application) throws {
-	app.get { req in
-		return req.view.render("index", ["title": "Hello Vapor!"])
-	}
+	try app.register(collection: AuthController())
 
-	app.get("hello") { req -> String in
-		return "Hello, world!"
-	}
+	let protected = app.routes.grouped(
+		UserSessionAuthenticator(),
+		User.guardMiddleware()
+	)
+
+	try protected.register(collection: MainController())
 }
