@@ -1,8 +1,8 @@
-#extend("master"):
+#extend("templates/master"):
 	#export("title"):
 		Index
 	#endexport
 	#export("main"):
-		coucou
+		Kinoswin index
 	#endexport
 #endextend

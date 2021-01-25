@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-
 	<title>#import("title")</title>
 </head>
-
 <body>
 	<header>
-		<h1>kinoswin</h1>
+		<h1>Kinoswin - #import("title")</h1>
 	</header>
 	<main>
 		#import("main")
 	</main>
 	<footer>
-		Copyright © Alexandre SALMON et Valentin DEBON, 2021
+		Copyright © Alexandre SALMON et Valentin DEBON - 2021 - All rights reserved
 	</footer>
 </body>
 </html>

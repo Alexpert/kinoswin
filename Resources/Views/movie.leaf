@@ -1,0 +1,8 @@
+#extend("templates/master"):
+	#export("title"):
+		#(title)
+	#endexport
+	#export("main"):
+		Movie's page
+	#endexport
+#endextend

@@ -1,0 +1,8 @@
+#extend("templates/master"):
+	#export("title"):
+		Profile
+	#endexport
+	#export("main"):
+		User's profile
+	#endexport
+#endextend

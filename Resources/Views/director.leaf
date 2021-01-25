@@ -1,0 +1,8 @@
+#extend("templates/master"):
+	#export("title"):
+		#(firstname) #(lastname)
+	#endexport
+	#export("main"):
+		Director's page
+	#endexport
+#endextend
