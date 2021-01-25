@@ -50,6 +50,7 @@
 		</div>
 	</header>
 	<main class="ui container">
+		<div></div>
 		#import("main")
 	</main>
 	<footer>
