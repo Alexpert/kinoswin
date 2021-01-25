@@ -1,8 +1,145 @@
 #extend("master"):
 	#export("title"):
-		Index
+		Kinoswin
 	#endexport
 	#export("main"):
-		coucou
+		<h2 class="ui dividing header">Newcomers<a class="anchor"></a></h2>
+		<div class="ui six doubling cards">
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<h2 class="ui dividing header">Popular<a class="anchor"></a></h2>
+		<div class="ui six doubling cards">
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+			<div class="ui card">
+				<div class="ui fluid image">
+					<img src="assets/images/placeholders/movie_poster.jpg">
+				</div>
+				<div class="content">
+					<a class="header">Le Daim</a>
+					<div class="meta">
+					<span class="date">2019 - Quentin DUPIEUX</span>
+					</div>		
+				</div>
+			</div>
+		</div>
 	#endexport
 #endextend

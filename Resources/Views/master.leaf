@@ -3,18 +3,69 @@
 <head>
 	<meta charset="utf-8">
 
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<!-- Site Properties -->
 	<title>#import("title")</title>
+	<link rel="stylesheet" type="text/css" href="styles/components/reset.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/site.css">
+
+	<link rel="stylesheet" type="text/css" href="styles/components/container.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/grid.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/header.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/image.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/menu.css">
+
+	<link rel="stylesheet" type="text/css" href="styles/components/divider.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/segment.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/form.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/input.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/button.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/list.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/message.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/icon.css">
+	<link rel="stylesheet" type="text/css" href="styles/components/card.css">
+
+	<script src="assets/library/jquery.min.js"></script>
+	<script src="styles/components/form.js"></script>
+	<script src="styles/components/transition.js"></script>
 </head>
 
 <body>
 	<header>
-		<h1>kinoswin</h1>
+		<div class="ui menu">
+			<h2 class="header item">Kinoswin</h2>
+			<div class="right menu">
+				<div class="item">
+					<div class="ui action left icon input">
+						<i class="search icon"></i>
+						<input type="text" placeholder="Search">
+						<button class="ui button">Submit</button>
+					</div>
+				</div>
+				<a class="item">
+					Username
+				</a>
+			</div>
+		</div>
 	</header>
-	<main>
+	<main class="ui container">
+		<div></div>
 		#import("main")
 	</main>
 	<footer>
-		Copyright © Alexandre SALMON et Valentin DEBON, 2021
+		<div class="ui menu">
+			<div class="item">© 2021 Alexandre SALMON et Valentin DEBON</div>
+			<div class="right menu">
+				<a class="item" href="https://github.com/Alexpert/kinoswin">
+					<i class="github icon"></i>
+					Source
+				</a>
+			</div>
+		</div>
 	</footer>
 </body>
 </html>
