@@ -50,7 +50,7 @@
 		</div>
 	</header>
 	<main class="ui container">
-		<div></div>
+		<div></div> <!-- Don't remove this, it's padding... -->
 		#import("main")
 	</main>
 	<footer>
