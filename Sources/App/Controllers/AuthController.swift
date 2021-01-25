@@ -42,7 +42,7 @@ struct AuthController: RouteCollection {
 	}
 
 	private func form(request: Request) throws -> EventLoopFuture<View> {
-		return request.view.render("login")
+		request.view.render("login")
 	}
 
 	private func login(request: Request) throws -> Response {

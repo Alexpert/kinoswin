@@ -1,4 +1,5 @@
 import Vapor
+import Model
 
 struct MainController: RouteCollection {
 	func boot(routes: RoutesBuilder) throws {
