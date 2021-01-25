@@ -6,6 +6,7 @@ public func configure(_ app: Application) throws {
 
 	app.middleware.use(RedirectErrorMiddleware())
 	app.middleware.use(app.sessions.middleware)
+	app.middleware.use(FileMiddleware(publicDirectory: "Public"))
 
 	app.sessions.use(.memory)
 
