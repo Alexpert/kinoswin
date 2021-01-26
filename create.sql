@@ -47,7 +47,7 @@ CREATE TABLE playlist_positions (
 	media_uuid TEXT NOT NULL,
 	position INTEGER NOT NULL,
 
-	PRIMARY KEY (playlist_title, playlist_owner_login),
+	PRIMARY KEY (playlist_title, playlist_owner_login, position),
 	FOREIGN KEY (playlist_owner_login, playlist_title) REFERENCES playlists(owner_login, title),
 	FOREIGN KEY (media_uuid) REFERENCES medias(uuid)
 ); 
@@ -57,7 +57,7 @@ CREATE TABLE playlist_tags (
 	playlist_owner_login TEXT NOT NULL,
 	tag_value TEXT NOT NULL,
 
-	PRIMARY KEY (playlist_title, playlist_owner_login),
+	PRIMARY KEY (playlist_title, playlist_owner_login, tag_value),
 	FOREIGN KEY (playlist_owner_login, playlist_title) REFERENCES playlists(owner_login, title),
 	FOREIGN KEY (tag_value) REFERENCES tags(value)
 );
@@ -71,12 +71,12 @@ CREATE TABLE media_tags (
 	FOREIGN KEY (tag_value) REFERENCES tags(value)
 );
 
-CREATE TABLE viewing (
+CREATE TABLE viewings (
 	user_login TEXT NOT NULL,
 	media_uuid TEXT NOT NULL,
 	date INTEGER NOT NULL,
 
-	PRIMARY KEY (user_login, media_uuid),
+	PRIMARY KEY (user_login, media_uuid, date),
 	FOREIGN KEY (media_uuid) REFERENCES medias(uuid),
 	FOREIGN KEY (user_login) REFERENCES users(login)
 );
@@ -86,7 +86,7 @@ CREATE TABLE media_directors (
 	director_firstname TEXT NOT NULL,
 	director_lastname TEXT NOT NULL,
 
-	PRIMARY KEY (media_uuid),
+	PRIMARY KEY (media_uuid, director_firstname, director_lastname),
 	FOREIGN KEY (media_uuid) REFERENCES medias(uuid),
 	FOREIGN KEY (director_firstname, director_lastname) REFERENCES directors(firstname, lastname)
 );
