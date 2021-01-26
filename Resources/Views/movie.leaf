@@ -1,4 +1,4 @@
-#extend("templates/header_footer"):
+#extend("templates/page"):
 	#export("title"):
 		Le Daim
 	#endexport

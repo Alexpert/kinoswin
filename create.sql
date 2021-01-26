@@ -7,7 +7,7 @@ CREATE TABLE users (
 	FOREIGN KEY (parent) REFERENCES users(login)
 );
 
-CREATE TABLE media (
+CREATE TABLE medias (
 	uuid TEXT NOT NULL,
 	title TEXT NOT NULL,
 	release_date INTEGER NOT NULL,
@@ -44,12 +44,12 @@ CREATE TABLE playlists (
 CREATE TABLE playlist_positions (
 	playlist_title TEXT NOT NULL,
 	playlist_owner_login TEXT NOT NULL,
-	medium_uuid TEXT NOT NULL,
+	media_uuid TEXT NOT NULL,
 	position INTEGER NOT NULL,
 
 	PRIMARY KEY (playlist_title, playlist_owner_login),
 	FOREIGN KEY (playlist_owner_login, playlist_title) REFERENCES playlists(owner_login, title),
-	FOREIGN KEY (medium_uuid) REFERENCES media(uuid)
+	FOREIGN KEY (media_uuid) REFERENCES medias(uuid)
 ); 
 
 CREATE TABLE playlist_tags (
@@ -62,32 +62,32 @@ CREATE TABLE playlist_tags (
 	FOREIGN KEY (tag_value) REFERENCES tags(value)
 );
 
-CREATE TABLE medium_tags (
-	medium_uuid TEXT NOT NULL,
+CREATE TABLE media_tags (
+	media_uuid TEXT NOT NULL,
 	tag_value TEXT NOT NULL,
 
-	PRIMARY KEY (medium_uuid, tag_value),
-	FOREIGN KEY (medium_uuid) REFERENCES media(uuid),
+	PRIMARY KEY (media_uuid, tag_value),
+	FOREIGN KEY (media_uuid) REFERENCES medias(uuid),
 	FOREIGN KEY (tag_value) REFERENCES tags(value)
 );
 
 CREATE TABLE viewing (
 	user_login TEXT NOT NULL,
-	medium_uuid TEXT NOT NULL,
+	media_uuid TEXT NOT NULL,
 	date INTEGER NOT NULL,
 
-	PRIMARY KEY (user_login, medium_uuid),
-	FOREIGN KEY (medium_uuid) REFERENCES media(uuid),
+	PRIMARY KEY (user_login, media_uuid),
+	FOREIGN KEY (media_uuid) REFERENCES medias(uuid),
 	FOREIGN KEY (user_login) REFERENCES users(login)
 );
 
-CREATE TABLE medium_directors (
-	medium_uuid TEXT NOT NULL,
+CREATE TABLE media_directors (
+	media_uuid TEXT NOT NULL,
 	director_firstname TEXT NOT NULL,
 	director_lastname TEXT NOT NULL,
 
-	PRIMARY KEY (medium_uuid),
-	FOREIGN KEY (medium_uuid) REFERENCES media(uuid),
+	PRIMARY KEY (media_uuid),
+	FOREIGN KEY (media_uuid) REFERENCES medias(uuid),
 	FOREIGN KEY (director_firstname, director_lastname) REFERENCES directors(firstname, lastname)
 );
 

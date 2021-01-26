@@ -1,10 +1,10 @@
 
 public struct MediumTag: Codable {
 	private enum CodingKeys: String, CodingKey {
-		case mediumUUID = "medium_uuid"
+		case mediaUUID = "media_uuid"
 		case tagValue = "tag_value"
 	}
 
-	public let mediumUUID: String
+	public let mediaUUID: String
 	public let tagValue: String
 }

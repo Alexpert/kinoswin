@@ -1,3 +1,4 @@
+import Foundation
 
 public struct Media: Codable {
 	private enum CodingKeys: String, CodingKey {
@@ -8,10 +9,14 @@ public struct Media: Codable {
 		case synopsis
 	}
 
-	public let uuid: String
+	public let uuid: UUID
 	public let title: String
 	public let releaseDate: Int
 	public let uploadDate: Int
 	public let synopsis: String?
+
+	public var releaseYear: Int {
+		Calendar.current.component(.year, from: Date(timeIntervalSince1970: TimeInterval(self.releaseDate)))
+	}
 }
 
