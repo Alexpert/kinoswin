@@ -1,6 +1,6 @@
 #extend("templates/master"):
-	#export("title"):
-		#(title)
+	#export("page_title"):
+		#import("title")
 	#endexport
 	#export("body"):
 		<header>
