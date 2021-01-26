@@ -1,5 +1,5 @@
 #extend("templates/master"):
-	#export("page_title"):
+	#export("title"):
 		Login
 	#endexport
 	#export("body"):

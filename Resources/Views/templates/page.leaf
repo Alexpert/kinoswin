@@ -1,7 +1,4 @@
 #extend("templates/master"):
-	#export("page_title"):
-		#import("title")
-	#endexport
 	#export("body"):
 		<header>
 			<div class="ui menu">
@@ -15,7 +12,7 @@
 						</div>
 					</div>
 					<a class="item">
-						Username
+						#(login)
 					</a>
 				</div>
 			</div>
