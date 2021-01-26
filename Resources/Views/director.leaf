@@ -1,4 +1,4 @@
-#extend("templates/master"):
+#extend("templates/header_footer"):
 	#export("title"):
 		#(firstname) #(lastname)
 	#endexport

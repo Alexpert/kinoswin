@@ -1,0 +1,40 @@
+#extend("templates/master"):
+	#export("title"):
+		#(title)
+	#endexport
+	#export("body"):
+		<header>
+			<div class="ui menu">
+				<h2 class="header item">Kinoswin - #import("title")</h2>
+				<div class="right menu">
+					<div class="item">
+						<div class="ui action left icon input">
+							<i class="search icon"></i>
+							<input type="text" placeholder="Search">
+							<button class="ui button">Submit</button>
+						</div>
+					</div>
+					<a class="item">
+						Username
+					</a>
+				</div>
+			</div>
+		</header>
+		<main class="ui container">
+			<div></div><!-- This is padding, do not remove -->
+			#import("main")
+		</main>
+		<footer>
+			<div></div><!-- This is padding, do not remove -->
+			<div class="ui menu">
+				<div class="item">© 2021 Alexandre SALMON et Valentin DEBON</div>
+				<div class="right menu">
+					<a class="item" href="https://github.com/Alexpert/kinoswin">
+						<i class="github icon"></i>
+						Source
+					</a>
+				</div>
+			</div>
+	</footer>
+	#endexport
+#endextend

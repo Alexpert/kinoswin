@@ -32,36 +32,6 @@
 	<script src="semantic-ui-css/components/transition.js"></script>
 </head>
 <body>
-	<header>
-		<div class="ui menu">
-			<h2 class="header item">Kinoswin - #import("title")</h2>
-			<div class="right menu">
-				<div class="item">
-					<div class="ui action left icon input">
-						<i class="search icon"></i>
-						<input type="text" placeholder="Search">
-						<button class="ui button">Submit</button>
-					</div>
-				</div>
-				<a class="item">
-					Username
-				</a>
-			</div>
-		</div>
-	</header>
-	<main class="ui container">
-		#import("main")
-	</main>
-	<footer>
-		<div class="ui menu">
-			<div class="item">© 2021 Alexandre SALMON et Valentin DEBON</div>
-			<div class="right menu">
-				<a class="item" href="https://github.com/Alexpert/kinoswin">
-					<i class="github icon"></i>
-					Source
-				</a>
-			</div>
-		</div>
-	</footer>
+		#import("body")
 </body>
 </html>

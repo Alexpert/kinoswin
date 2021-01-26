@@ -2,7 +2,7 @@
 	#export("title"):
 		Login
 	#endexport
-	#export("main"):
+	#export("body"):
 		<style type="text/css">
 			body {
 				background-image: url("images/login-background.jpg");
