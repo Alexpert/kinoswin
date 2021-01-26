@@ -1,8 +1,32 @@
 #extend("templates/header_footer"):
 	#export("title"):
-		#(title)
+		Le Daim
 	#endexport
 	#export("main"):
-		Movie's page
+	<h2 class="ui dividing header">Le Daim</h2>
+	<div class="ui internally celled grid">
+		<div class="row">
+			<div class="four wide column">
+				<div class="ui fluid blurring dimmable image">
+					<div class="ui dimmer">
+						<div class="content">
+							<div class="center">
+								<div class="ui inverted button">Add Friend</div>
+							</div>
+						</div>
+					</div>
+					<img src="placeholders/movie_poster.jpg">
+				</div>
+			</div>
+			<div class="twelve wide column">
+				<div><h4>Release date:</h4> 2019</div>
+				<div><h4>Director:</h4> Quentin DUPIEUX</div>
+				<div><h4>Synopsis:</h4> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat in risus et viverra. Ut aliquet lorem lacus, quis ultrices leo tincidunt sit amet. Etiam ultrices auctor sodales. Cras vel aliquam lorem, vel accumsan augue. Sed sed tincidunt ex, ut interdum sem. Vivamus at rutrum quam. Praesent augue felis, convallis quis feugiat vel, interdum et tellus. Etiam tempus mauris et elit lacinia rutrum. Duis vel nulla sapien. Morbi eros dui, faucibus sit amet mattis ac, rutrum sed magna. Vivamus venenatis lobortis nisi. Vestibulum lobortis nisl ex, id sagittis dolor fermentum sed.
+					Ut ut libero ac quam fermentum tincidunt. Donec eget justo a nunc finibus ullamcorper sit amet et mi. Nunc arcu nisi, suscipit eu suscipit et, tincidunt porttitor libero. Quisque et mi odio. Nullam id nibh id ante fermentum elementum et nec nulla. Cras at sapien tristique, placerat elit a, bibendum nibh. Donec consequat nunc purus. Donec dignissim porttitor laoreet. Sed pharetra ex a erat interdum fermentum. Praesent aliquam nec elit sit amet iaculis.
+				</div>
+			</div>
+		</div>
+	</div>
 	#endexport
 #endextend
+				
