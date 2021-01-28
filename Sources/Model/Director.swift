@@ -8,11 +8,6 @@ public struct Director: Codable {
 		case birthDate = "birth_date"
 	}
 
-	struct PrimaryKey: Encodable {
-		let firstname: String
-		let lastname: String
-	}
-
 	public let firstname: String
 	public let lastname: String
 	public let nationality: String

@@ -1,41 +1,30 @@
-import Foundation
+import SQLiteCodable
 import SQLCodable
+import Foundation
 
-public struct DAO {
-	public static let shared = { () -> DAO in
+public final class DAO : SQLDataAccessObject {
+	public static let shared = DAO()
+
+	public let database: SQLDatabase
+
+	private init() {
 		do {
-			return try DAO()
-		} catch let sqliteError as SQLiteError {
-			fatalError("SQLiteError on creating DAO: \(sqliteError.localizedDescription)")
+			self.database = try SQLiteDatabase(filename: "db.sqlite")
 		} catch {
 			fatalError("Unable to create DAO: \(error)")
 		}
-	}()
-
-	private let database: SQLDatabase
-
-	private let findUserStatement: SQLStatement
-	private let findDirectorStatement: SQLStatement
-	private let findMediaStatement: SQLStatement
-
-	private init() throws {
-		self.database = try SQLiteDatabase(filename: "db.sqlite")
-
-		self.findUserStatement = try database.makeStatement(query: "select * from users where login = ?1")
-		self.findDirectorStatement = try database.makeStatement(query: "select * from directors where firstname = :firstname and lastname = :lastname")
-		self.findMediaStatement = try database.makeStatement(query: "select * from medias where uuid = ?1")
 	}
 
 	public func findUser(forLogin login: String) throws -> User? {
-		try self.findUserStatement.setup(with: login).step()
+		try self.query("select * from users where login = ?1", with: login).next()
 	}
 
 	public func findDirector(firstname: String, lastname: String) throws -> Director? {
-		try self.findDirectorStatement.setup(with: Director.PrimaryKey(firstname: firstname, lastname: lastname)).step()
+		try self.query("select * from directors where firstname = ?1 and lastname = ?1", with: firstname, lastname).next()
 	}
 
 	public func findMedia(forUUID uuid: UUID) throws -> Media? {
-		try self.findMediaStatement.setup(with: uuid).step()
+		try self.query("select * from medias where uuid = ?1", with: uuid).next()
 	}
 }
 
